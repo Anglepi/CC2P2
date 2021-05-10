@@ -2,7 +2,7 @@ import pandas as pd
 import pmdarima as pm
 import pickle
 
-data_temperature = pd.read_csv('data/temperature.csv', names=['San Francisco'], header=0)
+data_temperature = pd.read_csv('data/SFData.csv', names=['TEMPERATURE'], header=0)
 data_temperature.dropna(inplace=True)
 
 temperatures_model = pm.auto_arima(
@@ -26,7 +26,7 @@ temperatures_model = pm.auto_arima(
 with open('models/temperature.pkl', 'wb') as pkl:
     pickle.dump(temperatures_model, pkl)
 
-data_humidity = pd.read_csv('data/humidity.csv', names=['San Francisco'], header=0)
+data_humidity = pd.read_csv('data/SFData.csv', names=['HUMIDITY'], header=0)
 data_humidity.dropna(inplace=True)
 
 humidity_model = pm.auto_arima(
