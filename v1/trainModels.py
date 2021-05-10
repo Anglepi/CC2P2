@@ -23,7 +23,7 @@ temperatures_model = pm.auto_arima(
     stepwise=True
 )
 
-with open('models/temperature.pkl', 'wb') as pkl:
+with open('/tmp/API/CC2P2-main/v1/models/temperature.pkl', 'wb') as pkl:
     pickle.dump(temperatures_model, pkl)
 
 data_humidity = pd.read_csv('/tmp/API/CC2P2-main/v1/data/SFData.csv', names=['HUMIDITY'], header=0)
@@ -47,5 +47,5 @@ humidity_model = pm.auto_arima(
     stepwise=True
 )
 
-with open('models/humidity.pkl', 'wb') as pkl:
+with open('/tmp/API/CC2P2-main/v1/models/humidity.pkl', 'wb') as pkl:
     pickle.dump(humidity_model, pkl)
