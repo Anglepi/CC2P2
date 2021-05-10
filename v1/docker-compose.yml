@@ -1,0 +1,9 @@
+version: '3'
+services:
+    apiv1:
+        container_name: apiv1
+        build: .
+        ports:
+            - 8082:8082
+        volumes: 
+            - .:/ApiV1
