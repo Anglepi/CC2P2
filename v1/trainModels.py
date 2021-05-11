@@ -3,7 +3,7 @@ import pmdarima as pm
 import pickle
 import os.path
 
-if(!os.path.is_file('/tmp/API/CC2P2-main/v1/models/temperature.pkl')):
+if not os.path.is_file('/tmp/API/CC2P2-main/v1/models/temperature.pkl'):
     data_temperature = pd.read_csv('/tmp/API/CC2P2-main/v1/data/SFData.csv', names=['TEMPERATURE'], header=0)
     data_temperature.dropna(inplace=True)
 
@@ -30,7 +30,7 @@ if(!os.path.is_file('/tmp/API/CC2P2-main/v1/models/temperature.pkl')):
     
 
 
-if(!os.path.is_file('/tmp/API/CC2P2-main/v1/models/humidity.pkl')):
+if not os.path.is_file('/tmp/API/CC2P2-main/v1/models/humidity.pkl'):
     data_humidity = pd.read_csv('/tmp/API/CC2P2-main/v1/data/SFData.csv', names=['HUMIDITY'], header=0)
     data_humidity.dropna(inplace=True)
 
